@@ -22,5 +22,6 @@ const input = document.getElementById("searchInput");
 
 input.addEventListener("input", (event) => {
   console.log("User typed:", event.target.value);
+  // search(event.target.value);   call happens on each keypress
   debouncedSearch(event.target.value);
 });

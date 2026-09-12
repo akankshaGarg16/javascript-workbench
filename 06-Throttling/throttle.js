@@ -1,3 +1,12 @@
+let eventCount = 0;
+let throttleCount = 0;
+
+function handleMouseMove(event) {
+  throttleCount++;
+  document.getElementById("throttleCount").textContent = throttleCount;
+  console.log("Throttled function executed:", throttleCount);
+}
+
 function throttle(fn, delay) {
   let waiting = false;
   return function (...args) {
@@ -6,15 +15,6 @@ function throttle(fn, delay) {
     waiting = true;
     setTimeout(() => (waiting = false), delay);
   };
-}
-
-let eventCount = 0;
-let throttleCount = 0;
-
-function handleMouseMove(event) {
-  throttleCount++;
-  document.getElementById("throttleCount").textContent = throttleCount;
-  console.log("Throttled function executed:", throttleCount);
 }
 
 // throttled function
