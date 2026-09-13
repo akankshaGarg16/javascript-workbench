@@ -173,22 +173,22 @@
 
 // // 10. this with call()
 
-const user1 = {
-    name: "Akanksha"
-};
+// const user1 = {
+//     name: "Akanksha"
+// };
 
-const user2 = {
-    name: "Amit"
-};
+// const user2 = {
+//     name: "Amit"
+// };
 
-function greet() {
-    console.log(this.name);
-}
+// function greet() {
+//     console.log(this.name);
+// }
 
-greet.call(user1);
-greet.call(user2);
+// greet.call(user1);
+// greet.call(user2);
 
-// output: Akanksha Amit
+// // output: Akanksha Amit
 
 // ---------------------------------------------------------------------------------------
 
@@ -203,8 +203,11 @@ greet.call(user2);
 //     console.log(age);
 // }
 
-// greet.call(user, 25);
+// greet.call(user, 30);
 
+// // Output: Akanksha 30
+
+// ---------------------------------------------------------------------------------------
 
 // // 12. apply()
 
@@ -218,8 +221,11 @@ greet.call(user2);
 //     console.log(city);
 // }
 
-// greet.apply(user, [25, "Lucknow"]);
+// greet.apply(user, [30, "Lucknow"]);
 
+// // output: Akanksha 30 Lucknow
+
+// ---------------------------------------------------------------------------------------
 
 // // 13. bind()
 
@@ -235,6 +241,9 @@ greet.call(user2);
 
 // fn();
 
+// // output: Akanksha
+
+// ---------------------------------------------------------------------------------------
 
 // // 14. bind() called again
 
@@ -243,7 +252,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul"
+//     name: "Amit"
 // };
 
 // function greet() {
@@ -256,6 +265,10 @@ greet.call(user2);
 
 // fn2();
 
+// // output: Akanksha
+// as first bind call whose result is stored in fn, fixes the name
+
+// ---------------------------------------------------------------------------------------
 
 // // 15. call() on bound function
 
@@ -264,7 +277,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul"
+//     name: "Amit"
 // };
 
 // function greet() {
@@ -274,6 +287,11 @@ greet.call(user2);
 // const fn = greet.bind(user1);
 
 // fn.call(user2);
+
+// // output: Akanksha
+// // this too fixes the value
+
+// ---------------------------------------------------------------------------------------
 
 
 // // 16. Arrow function with call()
@@ -315,7 +333,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul"
+//     name: "Amit"
 // };
 
 // user2.greet = user1.greet;
@@ -335,7 +353,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul",
+//     name: "Amit",
 //     greet
 // };
 
@@ -448,7 +466,7 @@ greet.call(user2);
 //     this.name = name;
 
 //     return {
-//         name: "Rahul"
+//         name: "Amit"
 //     };
 // }
 
@@ -462,7 +480,7 @@ greet.call(user2);
 // function User(name) {
 //     this.name = name;
 
-//     return "Rahul";
+//     return "Amit";
 // }
 
 // const user = new User("Akanksha");
@@ -481,7 +499,7 @@ greet.call(user2);
 // }
 
 // const user1 = new User("Akanksha");
-// const user2 = new User("Rahul");
+// const user2 = new User("Amit");
 
 // user1.greet();
 // user2.greet();
@@ -573,7 +591,7 @@ greet.call(user2);
 // }
 
 // const user1 = new User("Akanksha");
-// const user2 = new User("Rahul");
+// const user2 = new User("Amit");
 
 // user1.greet.call(user2);
 
@@ -621,7 +639,7 @@ greet.call(user2);
 //     }
 // };
 
-// user.username = "Rahul";
+// user.username = "Amit";
 
 // console.log(user.name);
 
@@ -710,7 +728,7 @@ greet.call(user2);
 // };
 
 // const obj = {
-//     name: "Rahul",
+//     name: "Amit",
 //     greet: user.greet
 // };
 
@@ -803,7 +821,7 @@ greet.call(user2);
 
 // const user2 = {
 
-//     name: "Rahul",
+//     name: "Amit",
 
 //     greet() {
 //         console.log(this.name);
@@ -901,7 +919,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul"
+//     name: "Amit"
 // };
 
 // function greet() {
@@ -1021,7 +1039,7 @@ greet.call(user2);
 // };
 
 // const obj = {
-//     name: "Rahul",
+//     name: "Amit",
 //     greet: user.greet
 // };
 
@@ -1142,7 +1160,7 @@ greet.call(user2);
 // const fn = user.greet();
 
 // fn.call({
-//     name: "Rahul"
+//     name: "Amit"
 // });
 
 
@@ -1163,7 +1181,7 @@ greet.call(user2);
 // const fn = user.greet();
 
 // fn.call({
-//     name: "Rahul"
+//     name: "Amit"
 // });
 
 
@@ -1195,7 +1213,7 @@ greet.call(user2);
 //     getObject() {
 
 //         return {
-//             name: "Rahul",
+//             name: "Amit",
 
 //             greet() {
 //                 console.log(this.name);
@@ -1345,7 +1363,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul"
+//     name: "Amit"
 // };
 
 // function greet() {
@@ -1364,7 +1382,7 @@ greet.call(user2);
 // };
 
 // const user2 = {
-//     name: "Rahul"
+//     name: "Amit"
 // };
 
 // function greet() {
