@@ -26,5 +26,6 @@ const box = document.getElementById("box");
 box.addEventListener("mousemove", (event) => {
   eventCount++;
   document.getElementById("eventCount").textContent = eventCount;
+  // handleMouseMove(event);    // call happens everytime mouse is moved
   throttledMouseMove(event);
 });
